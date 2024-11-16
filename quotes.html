@@ -1,0 +1,231 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Add New Quote</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            margin: 0;
+            padding: 0;
+            background-color: #f9f9f9;
+        }
+
+        .container {
+            max-width: 1200px;
+            margin: 20px auto;
+            background-color: white;
+            padding: 20px;
+            border: 1px solid #ccc;
+            border-radius: 5px;
+            box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+        }
+
+        h1 {
+            font-size: 20px;
+            margin-bottom: 20px;
+        }
+
+        .row {
+            display: flex;
+            align-items: center;
+            margin-bottom: 15px;
+            gap: 15px;
+        }
+
+        .row label {
+            flex: 0 0 150px;
+            font-weight: bold;
+            white-space: nowrap;
+        }
+
+        .row input,
+        .row select,
+        .row textarea {
+            flex: 1;
+            padding: 8px;
+            font-size: 14px;
+            border: 1px solid #ccc;
+            border-radius: 4px;
+        }
+
+        .row input[type="date"] {
+            padding: 6px;
+        }
+
+        .row .icon {
+            flex: 0 0 auto;
+            background-color: #f1f1f1;
+            padding: 8px 10px;
+            border: 1px solid #ccc;
+            border-radius: 4px;
+            cursor: pointer;
+            margin-left: 5px;
+        }
+
+        .row textarea {
+            height: 60px;
+            resize: none;
+        }
+
+        .row .required {
+            color: red;
+            margin-left: 5px;
+        }
+
+        .actions {
+            display: flex;
+            justify-content: flex-end;
+            gap: 10px;
+            margin-top: 20px;
+        }
+
+        .actions button {
+            padding: 10px 20px;
+            border: none;
+            background-color: #0078D7;
+            color: white;
+            font-size: 14px;
+            cursor: pointer;
+            border-radius: 4px;
+        }
+
+        .actions button:hover {
+            background-color: #005bb5;
+        }
+
+        .actions .cancel {
+            background-color: #ccc;
+            color: black;
+        }
+
+        .actions .cancel:hover {
+            background-color: #999;
+        }
+
+        .header-actions {
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            margin-bottom: 15px;
+        }
+
+        .header-actions a {
+            text-decoration: none;
+            color: #0078D7;
+            font-size: 14px;
+        }
+
+        .header-actions a:hover {
+            text-decoration: underline;
+        }
+
+        .header-actions a.back {
+            display: flex;
+            align-items: center;
+        }
+
+        .header-actions a.back::before {
+            content: "← ";
+            margin-right: 5px;
+        }
+    </style>
+</head>
+<body>
+
+<div class="container">
+    <div class="header-actions">
+        <h1>Add New Quote</h1>
+        <!-- Updated Back to Homepage Link -->
+        <a href="home.html" class="back">Back to Homepage</a>
+    </div>
+
+    <!-- Quote Details -->
+    <div class="row">
+        <label for="quoteNumber">Quote Number</label>
+        <input type="text" id="quoteNumber" value="140649">
+    </div>
+
+    <div class="row">
+        <label for="contact">Contact</label>
+        <input type="text" id="contact" value="DRHALI">
+        <div class="icon">🔍</div>
+    </div>
+
+    <div class="row">
+        <label for="previousQuoteNo">Previous Quote No</label>
+        <input type="text" id="previousQuoteNo" value="140647">
+    </div>
+
+    <div class="row">
+        <label for="qaNotes">QA Notes</label>
+        <textarea id="qaNotes"></textarea>
+    </div>
+
+    <!-- Customer Details -->
+    <div class="row">
+        <label for="customer">Customer<span class="required">*</span></label>
+        <input type="text" id="customer" value="DRHALITH">
+    </div>
+
+    <div class="row">
+        <label for="customerName">Customer Name</label>
+        <input type="text" id="customerName" value="Dr. Halith">
+    </div>
+
+    <div class="row">
+        <label for="date">Date<span class="required">*</span></label>
+        <input type="date" id="date" value="2022-03-02">
+    </div>
+
+    <div class="row">
+        <label for="orderNo">Order No</label>
+        <input type="text" id="orderNo">
+    </div>
+
+    <div class="row">
+        <label for="chargeCode">Charge Code</label>
+        <input type="text" id="chargeCode">
+    </div>
+
+    <div class="row">
+        <label for="trackingId">Tracking ID</label>
+        <input type="text" id="trackingId" value="140649">
+    </div>
+
+    <!-- Estimator and Department -->
+    <div class="row">
+        <label for="estimator">Estimator</label>
+        <input type="text" id="estimator" value="AN">
+        <div class="icon">🔍</div>
+    </div>
+
+    <div class="row">
+        <label for="department">Department</label>
+        <select id="department">
+            <option value="">-- Select --</option>
+            <option value="Sales">Sales</option>
+            <option value="Production">Production</option>
+        </select>
+    </div>
+
+    <div class="row">
+        <label for="customerReference">Customer Reference</label>
+        <input type="text" id="customerReference">
+    </div>
+
+    <div class="row">
+        <label for="ourReference">Our Reference</label>
+        <input type="text" id="ourReference">
+    </div>
+
+    <!-- Actions -->
+    <div class="actions">
+        <button type="button" class="cancel">Cancel</button>
+        <button type="button">Save</button>
+    </div>
+</div>
+
+</body>
+</html>
